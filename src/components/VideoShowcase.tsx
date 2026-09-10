@@ -54,7 +54,6 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = () => {
               <iframe
                 src={embedUrl}
                 className="w-full h-full border-0"
-                allowTransparency
                 allow="encrypted-media"
                 title="Bun & Mi Instagram Reel"
               />
