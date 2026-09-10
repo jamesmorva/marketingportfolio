@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onWatchReels, onContactClick }) => {
           className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] max-w-4xl"
         >
           Hook the scroll.{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">
+          <span className="inline-block pr-2 pb-1.5 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">
             Tell the story.
           </span>{' '}
           Drive the numbers.
