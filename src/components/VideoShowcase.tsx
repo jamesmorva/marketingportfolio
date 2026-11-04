@@ -14,42 +14,38 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = () => {
   const embedUrl = 'https://www.instagram.com/reel/DcwOm5upcCX/embed';
 
   return (
-    <section id="video-lab" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto">
-      {/* Section Header */}
+    <section id="video-lab" className="py-20 px-4 sm:px-6 max-w-[1200px] mx-auto">
+      {/* Section Header - Monospace print tag + 32-48px whisper light heading */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-8"
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12"
       >
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 mb-2.5">
-          <Film className="w-3 h-3" />
-          <span>VIDEO PRODUCTION // BUN & MI</span>
-        </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#878581] block mb-3">
+          CREATIVE DIRECTING // SPEC COMMERCIAL
+        </span>
+        <h2 className="text-3xl sm:text-5xl font-light text-white tracking-[-0.03em] leading-tight">
           Commercial Reel
         </h2>
-        <p className="mt-1.5 text-xs sm:text-sm text-zinc-400 max-w-lg mx-auto">
+        <p className="mt-3 text-sm sm:text-base text-[#878581] max-w-lg mx-auto tracking-[-0.02em]">
           Short-form commercial video created for Bun & Mi in Santa Monica.
         </p>
       </motion.div>
 
-      {/* Compact Showcase Card */}
+      {/* ai.work Card: Carbon (#141414), 10px radius, 1px hairline border in #d4d0c9 at 12% opacity */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.6 }}
-        className="rounded-2xl bg-[#0E121D] border border-white/10 p-5 sm:p-7 shadow-xl"
+        className="aiwork-card p-6 sm:p-10 max-w-4xl mx-auto"
       >
-        <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-          {/* Instagram Phone Mockup */}
-          <div className="w-full max-w-[260px] shrink-0 mx-auto">
-            <div className="relative aspect-[9/16] rounded-[28px] bg-black border-[4px] border-[#222736] shadow-2xl overflow-hidden flex flex-col">
-              {/* Speaker notch */}
-              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-2.5 bg-[#141724] rounded-full z-20 pointer-events-none" />
-
+        <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-10">
+          {/* Mockup Frame with 10px radius */}
+          <div className="w-full max-w-[270px] shrink-0 mx-auto">
+            <div className="relative aspect-[9/16] rounded-[10px] bg-[#0c0c0c] border border-[#d4d0c9]/15 shadow-2xl overflow-hidden flex flex-col">
               {/* Instagram Live Embed */}
               <iframe
                 src={embedUrl}
@@ -59,62 +55,61 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = () => {
               />
 
               {/* Bottom Quick Link Overlay */}
-              <div className="absolute bottom-2 inset-x-2 z-20">
+              <div className="absolute bottom-3 inset-x-3 z-20">
                 <a
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-1.5 px-3 rounded-lg bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white text-xs font-medium flex items-center justify-center gap-1.5 shadow hover:opacity-90 transition-opacity"
+                  className="aiwork-btn-primary w-full text-xs py-2"
                 >
                   <span>Watch on Instagram</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-3 h-3 ml-1" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Skimmable Reel Summary */}
-          <div className="flex-1 w-full text-left space-y-4">
+          <div className="flex-1 w-full text-left space-y-5">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#d4d0c9] bg-[#0c0c0c] border border-[#d4d0c9]/15 px-2.5 py-1 rounded-[2px]">
                 Bun & Mi • Santa Monica
               </span>
-              <span className="px-2.5 py-0.5 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-zinc-400">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#878581]">
                 Instagram Reel
               </span>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-white tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-light text-white tracking-[-0.02em]">
                 {videoProject.title}
               </h3>
             </div>
 
-            {/* Pattern Interrupt Hook */}
-            <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
-              <div className="flex items-center gap-1.5 text-[11px] font-mono text-blue-400 uppercase tracking-wider mb-1">
-                <Sparkles className="w-3 h-3" />
-                <span>The Hook</span>
+            {/* Inset Tar Box for the Hook */}
+            <div className="p-4 rounded-[6px] bg-[#0c0c0c] border border-[#d4d0c9]/10">
+              <div className="text-[10px] font-mono text-[#878581] uppercase tracking-wider mb-1">
+                Pattern Interrupt Hook
               </div>
-              <p className="text-sm font-semibold text-white">
+              <p className="text-sm font-normal text-[#d4d0c9]">
                 “{videoProject.hook}”
               </p>
             </div>
 
-            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+            <p className="text-sm text-[#878581] leading-relaxed tracking-[-0.02em]">
               Designed to stop the scroll in the first 2 seconds, turning a traditional Vietnamese dining ritual into a high-retention commercial that drives foot traffic.
             </p>
 
-            {/* Direct Link Button */}
+            {/* Direct Link Button: ai.work 100px Pill Button */}
             <div className="pt-2">
               <a
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white text-xs font-semibold shadow-md transition-all active:scale-95"
+                className="aiwork-btn-primary"
               >
                 <span>View Reel on Instagram</span>
-                <ExternalLink className="w-3.5 h-3.5" />
+                <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
               </a>
             </div>
           </div>

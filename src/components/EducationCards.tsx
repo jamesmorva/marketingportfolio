@@ -5,23 +5,22 @@ import { EDUCATION_DATA } from '../data';
 
 export const EducationCards: React.FC = () => {
   return (
-    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
       <motion.div
-        initial={{ opacity: 0, y: 28 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.6 }}
         className="mb-14"
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 mb-4">
-          <GraduationCap className="w-3.5 h-3.5" />
-          <span>ACADEMIC FOUNDATION</span>
-        </div>
-        <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#878581] block mb-3">
+          ACADEMIC // FOUNDATION
+        </span>
+        <h2 className="text-3xl sm:text-5xl font-light text-white tracking-[-0.03em] leading-tight">
           Education & Honors
         </h2>
-        <p className="mt-3 text-base sm:text-lg text-zinc-400 max-w-2xl">
-          A rigorous foundation in communication theory, persuasive rhetoric, and consumer behavior.
+        <p className="mt-3 text-sm sm:text-base text-[#878581] max-w-xl tracking-[-0.02em]">
+          Rigorous foundation in communication theory, consumer behavior, and media production rhetoric.
         </p>
       </motion.div>
 
@@ -29,41 +28,36 @@ export const EducationCards: React.FC = () => {
         {EDUCATION_DATA.map((edu, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 36, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, amount: 0.15, margin: '-30px' }}
-            transition={{ duration: 0.75, delay: idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
-            whileHover={{ y: -6, transition: { duration: 0.25, ease: 'easeOut' } }}
-            className="rounded-3xl bg-[#0F121C] border border-white/10 p-6 sm:p-8 hover:border-blue-500/40 transition-colors shadow-xl relative overflow-hidden"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
+            className="aiwork-card p-6 sm:p-8 relative flex flex-col justify-between"
           >
-            {/* Top Accent Strip */}
-            <div
-              className="absolute top-0 left-0 right-0 h-1.5"
-              style={{ backgroundColor: edu.accentColor }}
-            />
-
-            <div className="flex items-center justify-between mb-4">
-              <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
-                {edu.badge}
-              </span>
-              <span className="text-xs font-mono text-zinc-400">{edu.period}</span>
-            </div>
-
-            <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-              {edu.institution}
-            </h3>
-            <p className="text-sm font-semibold text-blue-400 mt-1">{edu.degree}</p>
-
-            {edu.gpa && (
-              <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-300">
-                <Star className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
-                <span>{edu.gpa} • {edu.honors}</span>
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#d4d0c9] bg-[#0c0c0c] border border-[#d4d0c9]/10 px-2.5 py-1 rounded-[2px]">
+                  {edu.badge}
+                </span>
+                <span className="text-[10px] font-mono text-[#878581] uppercase tracking-wider">{edu.period}</span>
               </div>
-            )}
 
-            <p className="mt-4 text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              {edu.description}
-            </p>
+              <h3 className="text-xl sm:text-2xl font-normal text-white tracking-[-0.02em]">
+                {edu.institution}
+              </h3>
+              <p className="text-xs font-mono text-[#878581] mt-1">{edu.degree}</p>
+
+              {edu.gpa && (
+                <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-[4px] bg-[#0c0c0c] border border-[#1fe274]/20 text-[11px] font-mono text-[#1fe274]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274]" />
+                  <span>{edu.gpa} • {edu.honors}</span>
+                </div>
+              )}
+
+              <p className="mt-4 text-xs sm:text-sm text-[#878581] leading-relaxed tracking-[-0.02em]">
+                {edu.description}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>

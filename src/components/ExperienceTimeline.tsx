@@ -5,77 +5,75 @@ import { CORE_SKILLS } from '../data';
 
 export const ExperienceTimeline: React.FC = () => {
   return (
-    <section id="experience" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
       {/* Section Header */}
       <motion.div
-        initial={{ opacity: 0, y: 28 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="mb-12"
+        transition={{ duration: 0.6 }}
+        className="mb-14"
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 mb-4">
-          <Briefcase className="w-3.5 h-3.5" />
-          <span>OPERATIONAL TRAJECTORY</span>
-        </div>
-        <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-          Experience & Execution
+        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#878581] block mb-3">
+          TRAJECTORY // SKILLS
+        </span>
+        <h2 className="text-3xl sm:text-5xl font-light text-white tracking-[-0.03em] leading-tight">
+          Experience & Competencies
         </h2>
-        <p className="mt-3 text-base sm:text-lg text-zinc-400 max-w-2xl">
-          Retail frontline guest operations paired with video editing and creative production tooling.
+        <p className="mt-3 text-sm sm:text-base text-[#878581] max-w-xl tracking-[-0.02em]">
+          Frontline customer advocacy and high-volume operations paired with precision video editing and creative tooling.
         </p>
       </motion.div>
 
-      {/* Balanced 2-Column Grid */}
+      {/* Balanced 2-Column Grid of ai.work Skill Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         {/* Left: Target Section */}
         <motion.div
-          initial={{ opacity: 0, y: 32, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.15, margin: '-30px' }}
-          transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          whileHover={{ y: -4, transition: { duration: 0.25, ease: 'easeOut' } }}
-          className="rounded-3xl bg-[#0F121C] border border-white/10 p-6 sm:p-8 hover:border-blue-500/30 transition-colors shadow-xl h-full flex flex-col justify-between"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6 }}
+          className="aiwork-card p-6 sm:p-8 flex flex-col justify-between"
         >
           <div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-[#d4d0c9]/10">
               <div>
-                <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl font-normal text-white tracking-[-0.02em] flex items-center gap-2">
                   <span>Target</span>
-                  <span className="text-xs font-mono font-normal text-zinc-500">/ Operations</span>
+                  <span className="text-xs font-mono text-[#878581]">/ Operations</span>
                 </h3>
-                <p className="text-sm font-semibold text-blue-400 mt-0.5">Cashier and Guest Advocate</p>
+                <p className="text-xs font-mono text-[#d4d0c9] mt-1">Cashier and Guest Advocate</p>
               </div>
-              <span className="self-start sm:self-auto px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-400">
+              <span className="self-start sm:self-auto text-[10px] font-mono text-[#878581] uppercase tracking-wider bg-[#0c0c0c] border border-[#d4d0c9]/10 px-2.5 py-1 rounded-[2px]">
                 Oct 2025 - Jun 2026
               </span>
             </div>
 
-            <p className="mt-4 text-sm text-zinc-400 leading-relaxed">
+            <p className="mt-4 text-xs sm:text-sm text-[#878581] leading-relaxed tracking-[-0.02em]">
               High-volume customer advocacy and transaction operations in a fast-paced retail flagship environment.
             </p>
 
             <div className="mt-5 space-y-2.5">
-              <div className="flex items-start gap-2.5 text-xs text-zinc-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274] shrink-0 mt-1.5" />
                 <span>Collaborated with 20+ team members during peak traffic periods to maintain seamless operational efficiency</span>
               </div>
-              <div className="flex items-start gap-2.5 text-xs text-zinc-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274] shrink-0 mt-1.5" />
                 <span>Resolved customer inquiries, returns, and digital app loyalty questions with composure and speed</span>
               </div>
-              <div className="flex items-start gap-2.5 text-xs text-zinc-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274] shrink-0 mt-1.5" />
                 <span>Recognized for exceptional attendance and consistent positive guest satisfaction ratings</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-2">
+          <div className="mt-6 pt-4 border-t border-[#d4d0c9]/10 flex flex-wrap gap-2">
             {['Conflict Resolution', 'Point of Sale (POS)', 'High-Pressure Operations', 'Team Collaboration'].map((skill, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/5 text-[11px] font-mono text-zinc-400"
+                className="px-2.5 py-1 rounded-[2px] bg-[#0c0c0c] border border-[#d4d0c9]/10 text-[10px] font-mono uppercase tracking-wider text-[#878581]"
               >
                 {skill}
               </span>
@@ -83,55 +81,54 @@ export const ExperienceTimeline: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Right: Core Production Stack (Evened Out with Target) */}
+        {/* Right: Core Production Stack */}
         <motion.div
           id="skills"
-          initial={{ opacity: 0, y: 32, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.15, margin: '-30px' }}
-          transition={{ duration: 0.75, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          whileHover={{ y: -4, transition: { duration: 0.25, ease: 'easeOut' } }}
-          className="rounded-3xl bg-[#0F121C] border border-white/10 p-6 sm:p-8 hover:border-blue-500/30 transition-colors shadow-xl h-full flex flex-col justify-between"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="aiwork-card p-6 sm:p-8 flex flex-col justify-between"
         >
           <div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-[#d4d0c9]/10">
               <div>
-                <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl font-normal text-white tracking-[-0.02em] flex items-center gap-2">
                   <span>Core Production Stack</span>
-                  <span className="text-xs font-mono font-normal text-zinc-500">/ Tooling</span>
+                  <span className="text-xs font-mono text-[#878581]">/ Tooling</span>
                 </h3>
-                <p className="text-sm font-semibold text-blue-400 mt-0.5">Video Editing & Creative Execution</p>
+                <p className="text-xs font-mono text-[#d4d0c9] mt-1">Video Editing & Creative Execution</p>
               </div>
-              <span className="self-start sm:self-auto px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400">
+              <span className="self-start sm:self-auto text-[10px] font-mono text-[#1fe274] uppercase tracking-wider bg-[#0c0c0c] border border-[#1fe274]/20 px-2.5 py-1 rounded-[2px]">
                 Active Stack
               </span>
             </div>
 
-            <p className="mt-4 text-sm text-zinc-400 leading-relaxed">
+            <p className="mt-4 text-xs sm:text-sm text-[#878581] leading-relaxed tracking-[-0.02em]">
               Software toolkit and production competencies applied across high-retention commercial video editing and creative strategy.
             </p>
 
             <div className="mt-5 space-y-2.5">
-              <div className="flex items-start gap-2.5 text-xs text-zinc-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00a8f0] shrink-0 mt-1.5" />
                 <span>Short-form commercial video assembly, multi-track audio sync, and kinetic pacing</span>
               </div>
-              <div className="flex items-start gap-2.5 text-xs text-zinc-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00a8f0] shrink-0 mt-1.5" />
                 <span>Pattern-interrupt hook strategy, first-2-second retention optimization, and visual framing</span>
               </div>
-              <div className="flex items-start gap-2.5 text-xs text-zinc-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00a8f0] shrink-0 mt-1.5" />
                 <span>Spreadsheet modeling, quantitative performance analysis, and social asset creation</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-2">
+          <div className="mt-6 pt-4 border-t border-[#d4d0c9]/10 flex flex-wrap gap-2">
             {CORE_SKILLS.map((skill, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/5 text-[11px] font-mono text-zinc-400 hover:text-white hover:border-blue-500/30 transition-colors"
+                className="px-2.5 py-1 rounded-[2px] bg-[#0c0c0c] border border-[#d4d0c9]/10 text-[10px] font-mono uppercase tracking-wider text-[#878581] hover:text-[#d4d0c9] transition-colors"
               >
                 {skill}
               </span>

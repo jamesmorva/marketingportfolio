@@ -22,12 +22,12 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07090E] text-white selection:bg-blue-600 selection:text-white font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#000000] text-[#d4d0c9] selection:bg-white selection:text-black font-sans antialiased overflow-x-hidden">
       {/* Dynamic Navbar with spinning logo connected to scroll */}
       <Navbar onContactClick={() => scrollToSection('contact')} />
 
       {/* Main Content Sections */}
-      <main>
+      <main className="relative z-10">
         {/* Kinetic Hero */}
         <Hero
           onWatchReels={() => scrollToSection('video-lab')}

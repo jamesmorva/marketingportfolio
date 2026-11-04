@@ -3,25 +3,100 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #000000;
+    color: #d4d0c9;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+/* ai.work Custom Utility Classes */
+.font-display {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.03em;
 }
 
-.bento-card {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+.text-bone {
+  color: #d4d0c9;
 }
 
-.bento-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 30px -10px rgba(45, 104, 196, 0.08), 0 10px 15px -3px rgba(0, 0, 0, 0.03);
-  border-color: #2D68C4;
+.text-ash {
+  color: #878581;
 }
+
+.text-smoke {
+  color: #615f5c;
+}
+
+.bg-obsidian {
+  background-color: #000000;
+}
+
+.bg-tar {
+  background-color: #0c0c0c;
+}
+
+.bg-carbon {
+  background-color: #141414;
+}
+
+.border-bone-hairline {
+  border-color: rgba(212, 208, 201, 0.12);
+}
+
+.border-smoke-hairline {
+  border-color: rgba(97, 95, 92, 0.35);
+}
+
+/* ai.work Skill Card styling (10px radius, Carbon fill, hairline warm-gray border) */
+.aiwork-card {
+  background-color: #141414;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 208, 201, 0.12);
+  transition: border-color 0.2s ease;
+}
+
+.aiwork-card:hover {
+  border-color: rgba(212, 208, 201, 0.28);
+}
+
+/* ai.work 100px Pill CTA Buttons */
+.aiwork-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  padding: 8px 18px;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  transition: all 0.2s ease;
+}
+
+.aiwork-btn-primary:hover {
+  background-color: #e5e5e5;
+}
+
+.aiwork-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background-color: transparent;
+  color: #d4d0c9;
+  border: 1px solid #615f5c;
+  font-weight: 500;
+  padding: 8px 18px;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  transition: all 0.2s ease;
+}
+
+.aiwork-btn-ghost:hover {
+  border-color: #d4d0c9;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
 

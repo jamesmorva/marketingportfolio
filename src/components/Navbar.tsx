@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
-import { Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavbarProps {
   onContactClick: () => void;
@@ -41,52 +41,56 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       />
 
       <nav
-        className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
+        className={`mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
           scrolled
-            ? 'py-3 bg-[#0B0D13]/85 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50'
-            : 'py-5 bg-transparent'
+            ? 'py-3.5 bg-[#000000]/90 backdrop-blur-md border-b border-[#d4d0c9]/10'
+            : 'py-6 bg-transparent'
         }`}
       >
         <div className="flex items-center justify-between">
-          {/* Simple Italicized JM Logo */}
+          {/* Brand Logo: Italicized JM */}
           <a
             href="#"
-            className="flex items-center space-x-1 font-bold tracking-tighter text-2xl italic group focus:outline-none"
+            className="flex items-center gap-2.5 font-normal tracking-tight group focus:outline-none"
           >
-            <span className="text-white group-hover:text-[#2D68C4] transition-colors">JM</span>
-            <span className="text-[#2D68C4] text-3xl leading-none font-sans not-italic">.</span>
+            <div className="w-8 h-8 rounded-[6px] bg-[#141414] border border-[#d4d0c9]/15 flex items-center justify-center text-[#d4d0c9] group-hover:text-white group-hover:border-[#d4d0c9]/30 transition-all select-none">
+              <span className="font-serif italic font-medium text-sm tracking-tight text-white group-hover:text-white transition-colors">
+                JM
+              </span>
+            </div>
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-white font-normal tracking-[-0.02em] group-hover:text-[#d4d0c9] transition-colors text-sm">james morva</span>
+              <span className="text-[#878581] font-mono text-[10px] uppercase tracking-wider">jr</span>
+            </div>
           </a>
 
-          {/* Center Navigation Pills */}
-          <div className="hidden md:flex items-center space-x-1 bg-white/[0.04] border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-md">
+          {/* Center Navigation Links - Whisper-quiet, no heavy card capsule, 12-13px white/bone text */}
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs font-medium text-zinc-300 hover:text-white rounded-full hover:bg-white/[0.08] transition-all duration-200"
+                className="text-xs font-normal text-[#878581] hover:text-[#ffffff] transition-colors tracking-[-0.02em]"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          {/* Right Action: Status Pill & Contact Button */}
+          {/* Right Action: Status Tag & ai.work 100px Pill Button */}
           <div className="hidden sm:flex items-center space-x-4">
-            {/* Live Availability Badge */}
-            <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-mono text-emerald-400">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span>Available UCLA '28</span>
+            {/* Live Availability Tag - Minimalist monospace print marker */}
+            <div className="flex items-center space-x-2 text-[10px] font-mono text-[#878581]">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#1fe274]" />
+              <span className="uppercase tracking-wider">UCLA '28</span>
             </div>
 
             <button
               onClick={onContactClick}
-              className="group relative inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-full bg-[#2D68C4] hover:bg-blue-600 text-white shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="aiwork-btn-primary"
             >
-              <span>Get in Touch</span>
-              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <span>Get in touch</span>
+              <ArrowUpRight className="w-3.5 h-3.5 ml-1" />
             </button>
           </div>
 
@@ -108,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="sm:hidden mt-3 p-4 rounded-2xl bg-[#0F121C] border border-white/10 shadow-2xl space-y-3"
+            className="sm:hidden mt-3 p-4 rounded-[10px] bg-[#141414] border border-[#d4d0c9]/15 shadow-2xl space-y-3"
           >
             <div className="space-y-1">
               {navLinks.map((link) => (
@@ -116,21 +120,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-3 py-2 text-sm text-zinc-300 hover:text-white rounded-lg hover:bg-white/5 transition-colors"
+                  className="block px-3 py-2 text-sm text-[#878581] hover:text-white rounded-[6px] hover:bg-[#0c0c0c] transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
             </div>
-            <div className="pt-2 border-t border-white/10 flex flex-col gap-2">
+            <div className="pt-2 border-t border-[#d4d0c9]/10 flex flex-col gap-2">
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   onContactClick();
                 }}
-                className="w-full text-center py-2.5 rounded-xl bg-[#2D68C4] text-white text-xs font-semibold"
+                className="aiwork-btn-primary w-full"
               >
-                Get in Touch
+                Get in touch
               </button>
             </div>
           </motion.div>

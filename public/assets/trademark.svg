@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140 180 720 640" fill="none" stroke="currentColor" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Outer Left Leg: Foot to Peak -->
+  <line x1="180" y1="780" x2="294" y2="220" />
+  
+  <!-- Left Inner Diagonal: Left Peak to Center Valley -->
+  <line x1="294" y1="220" x2="500" y2="560" />
+  
+  <!-- Right Inner Diagonal: Center Valley to Right Peak -->
+  <line x1="500" y1="560" x2="706" y2="220" />
+  
+  <!-- Outer Right Leg: Right Peak to Right Foot -->
+  <line x1="706" y1="220" x2="820" y2="780" />
+  
+  <!-- Center Diagonal Left: Center Peak to Left Leg Junction -->
+  <line x1="500" y1="220" x2="238" y2="495" />
+  
+  <!-- Center Diagonal Right: Center Peak to Right Leg Junction -->
+  <line x1="500" y1="220" x2="762" y2="495" />
+</svg>
