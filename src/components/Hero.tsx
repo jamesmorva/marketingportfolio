@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Play, ArrowDown, ExternalLink, FileText } from 'lucide-react';
+import { TRADEMARK_DATA_URI } from '../assets/trademarkDataUri';
 
 interface HeroProps {
   onWatchReels: () => void;
@@ -100,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onWatchReels }) => {
 
             <div className="relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[480px] aspect-square flex items-center justify-center">
               <img
-                src="/assets/aistudio/trademark_grey.png"
+                src={TRADEMARK_DATA_URI}
                 alt="James Morva Trademark Logo"
                 className="w-full h-auto object-contain transition-all duration-300 hover:brightness-125"
               />
