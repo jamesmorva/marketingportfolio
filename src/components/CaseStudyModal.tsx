@@ -75,7 +75,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ study, onClose }
               <ul className="space-y-2">
                 {study.highlights.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274] shrink-0 mt-1.5" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)] shrink-0 mt-1.5" />
                     <span>{item}</span>
                   </li>
                 ))}

@@ -55,15 +55,15 @@ export const ExperienceTimeline: React.FC = () => {
 
             <div className="mt-5 space-y-2.5">
               <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274] shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)] shrink-0 mt-1.5" />
                 <span>Collaborated with 20+ team members during peak traffic periods to maintain seamless operational efficiency</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274] shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)] shrink-0 mt-1.5" />
                 <span>Resolved customer inquiries, returns, and digital app loyalty questions with composure and speed</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274] shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)] shrink-0 mt-1.5" />
                 <span>Recognized for exceptional attendance and consistent positive guest satisfaction ratings</span>
               </div>
             </div>
@@ -73,7 +73,7 @@ export const ExperienceTimeline: React.FC = () => {
             {['Conflict Resolution', 'Point of Sale (POS)', 'High-Pressure Operations', 'Team Collaboration'].map((skill, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-1 rounded-[2px] bg-[#0c0c0c] border border-[#d4d0c9]/10 text-[10px] font-mono uppercase tracking-wider text-[#878581]"
+                className="px-2.5 py-1 rounded-[2px] bg-[#0c0c0c] border border-[#d4d0c9]/10 text-[10px] font-mono uppercase tracking-wider text-[#878581] hover:text-pink-400 hover:border-pink-500/30 transition-colors"
               >
                 {skill}
               </span>
@@ -97,9 +97,9 @@ export const ExperienceTimeline: React.FC = () => {
                   <span>Core Production Stack</span>
                   <span className="text-xs font-mono text-[#878581]">/ Tooling</span>
                 </h3>
-                <p className="text-xs font-mono text-[#d4d0c9] mt-1">Video Editing & Creative Execution</p>
+                <p className="text-xs font-mono text-pink-400 mt-1">Video Editing & Creative Execution</p>
               </div>
-              <span className="self-start sm:self-auto text-[10px] font-mono text-[#1fe274] uppercase tracking-wider bg-[#0c0c0c] border border-[#1fe274]/20 px-2.5 py-1 rounded-[2px]">
+              <span className="self-start sm:self-auto text-[10px] font-mono text-pink-400 uppercase tracking-wider bg-[#0c0c0c] border border-pink-500/30 px-2.5 py-1 rounded-[2px] shadow-[0_0_8px_rgba(236,72,153,0.15)]">
                 Active Stack
               </span>
             </div>
@@ -110,15 +110,15 @@ export const ExperienceTimeline: React.FC = () => {
 
             <div className="mt-5 space-y-2.5">
               <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00a8f0] shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)] shrink-0 mt-1.5" />
                 <span>Short-form commercial video assembly, multi-track audio sync, and kinetic pacing</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00a8f0] shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)] shrink-0 mt-1.5" />
                 <span>Pattern-interrupt hook strategy, first-2-second retention optimization, and visual framing</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-[#d4d0c9]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00a8f0] shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)] shrink-0 mt-1.5" />
                 <span>Spreadsheet modeling, quantitative performance analysis, and social asset creation</span>
               </div>
             </div>
@@ -128,7 +128,7 @@ export const ExperienceTimeline: React.FC = () => {
             {CORE_SKILLS.map((skill, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-1 rounded-[2px] bg-[#0c0c0c] border border-[#d4d0c9]/10 text-[10px] font-mono uppercase tracking-wider text-[#878581] hover:text-[#d4d0c9] transition-colors"
+                className="px-2.5 py-1 rounded-[2px] bg-[#0c0c0c] border border-[#d4d0c9]/10 text-[10px] font-mono uppercase tracking-wider text-[#878581] hover:text-pink-400 hover:border-pink-500/30 transition-colors"
               >
                 {skill}
               </span>

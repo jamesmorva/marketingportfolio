@@ -60,8 +60,8 @@ export const Footer: React.FC = () => {
       {/* Sub-footer */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#878581] pt-8 border-t border-[#d4d0c9]/10">
         <div className="flex items-center gap-3">
-          <div className="w-6 h-6 rounded-[4px] bg-[#141414] border border-[#d4d0c9]/15 flex items-center justify-center text-white select-none">
-            <span className="font-serif italic font-medium text-xs tracking-tight text-white">
+          <div className="w-6 h-6 rounded-[4px] bg-[#141414] border border-[#d4d0c9]/15 flex items-center justify-center text-white select-none hover:border-pink-500/40 transition-colors">
+            <span className="font-serif italic font-medium text-xs tracking-tight text-white hover:text-pink-400">
               JM
             </span>
           </div>
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
         <div className="flex items-center gap-4">
           <button
             onClick={scrollToTop}
-            className="hover:text-white transition-colors flex items-center gap-1 font-mono text-[11px]"
+            className="hover:text-pink-400 transition-colors flex items-center gap-1 font-mono text-[11px]"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />

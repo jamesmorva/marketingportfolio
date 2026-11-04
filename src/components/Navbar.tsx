@@ -34,9 +34,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Top micro progress bar */}
+      {/* Top micro progress bar in pink */}
       <motion.div
-        className="h-[2px] bg-gradient-to-r from-[#2D68C4] via-[#60A5FA] to-[#34D399] origin-left"
+        className="h-[2px] bg-gradient-to-r from-pink-600 via-pink-400 to-pink-300 origin-left"
         style={{ scaleX: smoothProgress }}
       />
 
@@ -53,14 +53,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             href="#"
             className="flex items-center gap-2.5 font-normal tracking-tight group focus:outline-none"
           >
-            <div className="w-8 h-8 rounded-[6px] bg-[#141414] border border-[#d4d0c9]/15 flex items-center justify-center text-[#d4d0c9] group-hover:text-white group-hover:border-[#d4d0c9]/30 transition-all select-none">
-              <span className="font-serif italic font-medium text-sm tracking-tight text-white group-hover:text-white transition-colors">
+            <div className="w-8 h-8 rounded-[6px] bg-[#141414] border border-[#d4d0c9]/15 flex items-center justify-center text-[#d4d0c9] group-hover:text-pink-400 group-hover:border-pink-500/40 transition-all select-none">
+              <span className="font-serif italic font-medium text-sm tracking-tight text-white group-hover:text-pink-400 transition-colors">
                 JM
               </span>
             </div>
             <div className="flex items-baseline gap-1.5">
-              <span className="text-white font-normal tracking-[-0.02em] group-hover:text-[#d4d0c9] transition-colors text-sm">james morva</span>
-              <span className="text-[#878581] font-mono text-[10px] uppercase tracking-wider">jr</span>
+              <span className="text-white font-normal tracking-[-0.02em] group-hover:text-pink-400 transition-colors text-sm">james morva</span>
+              <span className="text-pink-400/80 font-mono text-[10px] uppercase tracking-wider">jr</span>
             </div>
           </a>
 
@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs font-normal text-[#878581] hover:text-[#ffffff] transition-colors tracking-[-0.02em]"
+                className="text-xs font-normal text-[#878581] hover:text-pink-400 transition-colors tracking-[-0.02em]"
               >
                 {link.name}
               </a>
@@ -79,9 +79,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           {/* Right Action: Status Tag & ai.work 100px Pill Button */}
           <div className="hidden sm:flex items-center space-x-4">
-            {/* Live Availability Tag - Minimalist monospace print marker */}
-            <div className="flex items-center space-x-2 text-[10px] font-mono text-[#878581]">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#1fe274]" />
+            {/* Live Availability Tag - Pink highlight */}
+            <div className="flex items-center space-x-2 text-[10px] font-mono text-pink-400/90">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_8px_rgba(236,72,153,0.8)]" />
               <span className="uppercase tracking-wider">UCLA '28</span>
             </div>
 

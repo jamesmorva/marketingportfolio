@@ -48,8 +48,8 @@ export const EducationCards: React.FC = () => {
               <p className="text-xs font-mono text-[#878581] mt-1">{edu.degree}</p>
 
               {edu.gpa && (
-                <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-[4px] bg-[#0c0c0c] border border-[#1fe274]/20 text-[11px] font-mono text-[#1fe274]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#1fe274]" />
+                <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-[4px] bg-[#0c0c0c] border border-pink-500/30 text-[11px] font-mono text-pink-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(236,72,153,0.7)]" />
                   <span>{edu.gpa} • {edu.honors}</span>
                 </div>
               )}

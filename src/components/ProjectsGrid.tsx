@@ -33,9 +33,8 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectCaseStudy })
       {/* Grid: 3-column equal-width Skill Cards as specified in ai.work DESIGN.md */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {CASE_STUDIES.map((study, idx) => {
-          // Stat card vertical bar accent colors as documented in ai.work design system:
-          // green (#1fe274), blue (#00a8f0), orange (#ff9634)
-          const barColors = ['#1fe274', '#00a8f0', '#ff9634'];
+          // Pink highlight spectrum: #ec4899, #f472b6, #db2777
+          const barColors = ['#ec4899', '#f472b6', '#db2777'];
           const accentColor = barColors[idx % barColors.length];
 
           return (
@@ -46,15 +45,15 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectCaseStudy })
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: idx * 0.08 }}
               onClick={() => onSelectCaseStudy(study)}
-              className="aiwork-card p-6 sm:p-7 cursor-pointer flex flex-col justify-between group"
+              className="aiwork-card p-6 sm:p-7 cursor-pointer flex flex-col justify-between group hover:border-pink-500/40"
             >
               <div>
                 {/* Category tag & Arrow */}
                 <div className="flex items-center justify-between mb-5">
-                  <span className="text-[10px] font-mono tracking-wider text-[#878581] uppercase bg-[#0c0c0c] border border-[#d4d0c9]/10 px-2.5 py-1 rounded-[2px]">
+                  <span className="text-[10px] font-mono tracking-wider text-pink-300 uppercase bg-[#0c0c0c] border border-pink-500/20 px-2.5 py-1 rounded-[2px]">
                     {study.category}
                   </span>
-                  <div className="w-7 h-7 rounded-[100px] bg-[#0c0c0c] border border-[#d4d0c9]/15 group-hover:bg-white group-hover:text-black flex items-center justify-center text-[#878581] transition-all">
+                  <div className="w-7 h-7 rounded-[100px] bg-[#0c0c0c] border border-[#d4d0c9]/15 group-hover:bg-pink-500 group-hover:border-pink-500 group-hover:text-white flex items-center justify-center text-[#878581] transition-all">
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
@@ -89,7 +88,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectCaseStudy })
               {/* Bottom metadata */}
               <div className="pt-4 border-t border-[#d4d0c9]/10 flex items-center justify-between text-xs text-[#878581]">
                 <span className="font-mono text-[10px] uppercase tracking-wider">{study.dateRange}</span>
-                <span className="text-[#d4d0c9] text-[11px] group-hover:text-white transition-colors flex items-center gap-1 font-mono">
+                <span className="text-[#d4d0c9] text-[11px] group-hover:text-pink-400 transition-colors flex items-center gap-1 font-mono">
                   Inspect &rarr;
                 </span>
               </div>
