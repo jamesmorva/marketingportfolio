@@ -7,12 +7,14 @@ import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { EducationCards } from './components/EducationCards';
 import { VideoModal } from './components/VideoModal';
 import { CaseStudyModal } from './components/CaseStudyModal';
+import { ResumeModal } from './components/ResumeModal';
 import { Footer } from './components/Footer';
 import { VideoProject, CaseStudy } from './types';
 
 export function App() {
   const [selectedVideo, setSelectedVideo] = useState<VideoProject | null>(null);
   const [selectedStudy, setSelectedStudy] = useState<CaseStudy | null>(null);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -24,7 +26,10 @@ export function App() {
   return (
     <div className="min-h-screen bg-[#000000] text-[#d4d0c9] selection:bg-white selection:text-black font-sans antialiased overflow-x-hidden">
       {/* Dynamic Navbar with spinning logo connected to scroll */}
-      <Navbar onContactClick={() => scrollToSection('contact')} />
+      <Navbar
+        onContactClick={() => scrollToSection('contact')}
+        onViewResume={() => setIsResumeOpen(true)}
+      />
 
       {/* Main Content Sections */}
       <main className="relative z-10">
@@ -32,6 +37,7 @@ export function App() {
         <Hero
           onWatchReels={() => scrollToSection('video-lab')}
           onContactClick={() => scrollToSection('contact')}
+          onViewResume={() => setIsResumeOpen(true)}
         />
 
         {/* Featured Video Production Lab (Bun & Mi) */}
@@ -60,6 +66,12 @@ export function App() {
       <CaseStudyModal
         study={selectedStudy}
         onClose={() => setSelectedStudy(null)}
+      />
+
+      {/* Interactive Resume Modal */}
+      <ResumeModal
+        isOpen={isResumeOpen}
+        onClose={() => setIsResumeOpen(false)}
       />
     </div>
   );

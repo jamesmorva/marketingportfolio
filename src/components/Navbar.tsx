@@ -4,9 +4,10 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavbarProps {
   onContactClick: () => void;
+  onViewResume?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onContactClick, onViewResume }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollY, scrollYProgress } = useScroll();
@@ -75,6 +76,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
                 {link.name}
               </a>
             ))}
+            {onViewResume && (
+              <button
+                type="button"
+                onClick={onViewResume}
+                className="text-xs font-normal text-[#878581] hover:text-pink-400 transition-colors tracking-[-0.02em] cursor-pointer"
+              >
+                Resume
+              </button>
+            )}
           </div>
 
           {/* Right Action: Status Tag & ai.work 100px Pill Button */}
@@ -127,6 +137,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
               ))}
             </div>
             <div className="pt-2 border-t border-[#d4d0c9]/10 flex flex-col gap-2">
+              {onViewResume && (
+                <button
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    onViewResume();
+                  }}
+                  className="aiwork-btn-ghost w-full"
+                >
+                  View Resume
+                </button>
+              )}
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);

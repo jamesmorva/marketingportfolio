@@ -6,9 +6,10 @@ import { TRADEMARK_DATA_URI } from '../assets/trademarkDataUri';
 interface HeroProps {
   onWatchReels: () => void;
   onContactClick: () => void;
+  onViewResume?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onWatchReels }) => {
+export const Hero: React.FC<HeroProps> = ({ onWatchReels, onViewResume }) => {
   const { scrollY } = useScroll();
   // Keep the indicator fading on scroll, but the words and content remain 100% solid and opaque
   const indicatorOpacity = useTransform(scrollY, [0, 100], [1, 0]);
@@ -67,15 +68,14 @@ export const Hero: React.FC<HeroProps> = ({ onWatchReels }) => {
               transition={{ duration: 0.8, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
               className="mt-8 flex flex-wrap items-center gap-3"
             >
-              <a
-                href="/assets/aistudio/James_Michael_Morva_Jr_86977775."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="aiwork-btn-primary"
+              <button
+                type="button"
+                onClick={onViewResume}
+                className="aiwork-btn-primary cursor-pointer"
               >
                 <FileText className="w-3.5 h-3.5 mr-2" />
                 <span>View Resume</span>
-              </a>
+              </button>
 
               <a
                 href="https://www.linkedin.com/in/james-michael-morva-jr/"
